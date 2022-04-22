@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-@import "../../includes/lib";
-@import "../../includes/forms/lib";
+@import '../../includes/lib';
+@import '../../includes/forms/lib';
 
 //* -------------------------------------------------------------------------- */
 // Resets
@@ -41,9 +41,9 @@ textarea {
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
     -webkit-appearance: button;
 }
 
@@ -54,13 +54,13 @@ textarea {
 
 // 1. Correct the odd appearance in Chrome and Safari.
 // 2. Correct the outline style in Safari.
-[type="search"] {
+[type='search'] {
     -webkit-appearance: textfield; // 1
     outline-offset: -2px; // 2
 }
 
 // Remove the inner padding in Chrome and Safari on macOS.
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -73,8 +73,8 @@ textarea {
 
 // 1. Add the correct box sizing in IE 10.
 // 2. Remove the padding in IE 10.
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
     box-sizing: border-box; // 1
     padding: 0; // 2
 }
@@ -90,7 +90,7 @@ fieldset {
 
 legend {
     @include text-body-lg;
-    font-family: get-theme("title-font-family");
+    font-family: get-theme('title-font-family');
     font-weight: bold;
     margin-bottom: $field-v-spacing;
 }
@@ -100,12 +100,12 @@ label {
 }
 
 // check boxes and radio buttons
-[type="checkbox"],
-[type="radio"] {
+[type='checkbox'],
+[type='radio'] {
     border-radius: $field-border-radius;
 }
 
-[type="radio"] {
+[type='radio'] {
     border-radius: 100%;
 }
 
@@ -114,15 +114,15 @@ label {
 
 textarea,
 input[list],
-input[type="date"],
-input[type="email"],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="time"],
-input[type="url"] {
+input[type='date'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'] {
     @include form-input;
 
     &::placeholder {
@@ -158,7 +158,7 @@ input[type="url"] {
     }
 
     &:disabled,
-    &[aria-disabled="true"] {
+    &[aria-disabled='true'] {
         background: $color-marketing-gray-10;
         border-color: $color-marketing-gray-30;
         color: $color-marketing-gray-70;
@@ -170,14 +170,14 @@ input[type="url"] {
 }
 
 textarea,
-input[type="email"],
+input[type='email'],
 input[list],
-input[type="number"],
-input[type="password"],
-input[type="search"],
-input[type="tel"],
-input[type="text"],
-input[type="url"] {
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'] {
     min-width: $field-min-width;
     max-width: 100%;
 }
@@ -188,23 +188,23 @@ input[size] {
 }
 
 // size on HTML is not a good way to size things, this is most evident at small sizes
-input[size="2"] {
+input[size='2'] {
     max-width: calc(2.5ch + #{$field-padding * 2});
 }
 
-input[size="3"] {
+input[size='3'] {
     max-width: calc(3.5ch + #{$field-padding * 2});
 }
 
-input[size="4"] {
+input[size='4'] {
     max-width: calc(4.5ch + #{$field-padding * 2});
 }
 
-input[size="5"] {
+input[size='5'] {
     max-width: calc(5.5ch + #{$field-padding * 2});
 }
 
-input[type="search"] {
+input[type='search'] {
     background-image: $url-image-search-form;
     background-repeat: no-repeat;
     background-position: left 8px top 50%;
@@ -230,15 +230,15 @@ input[type="search"] {
         background-image: $url-image-search-link;
     }
 
-    [dir="rtl"] & {
+    [dir='rtl'] & {
         background-position: right 8px top 50%;
         padding: $field-padding calc(1.5em + #{$field-padding * 2})
             $field-padding $field-padding;
     }
 }
 
-input[type="color"],
-input[type="file"] {
+input[type='color'],
+input[type='file'] {
     background: $color-white;
     border-radius: $field-border-radius;
     border: $field-border;
@@ -270,7 +270,7 @@ input[type="file"] {
     }
 
     &:disabled,
-    &[aria-disabled="true"] {
+    &[aria-disabled='true'] {
         background: $color-marketing-gray-30;
         border-color: $color-marketing-gray-30;
         color: $color-marketing-gray-70;
@@ -281,7 +281,7 @@ input[type="file"] {
     }
 }
 
-input[type="file"] {
+input[type='file'] {
     padding: $field-padding;
 }
 
@@ -362,8 +362,8 @@ select {
     }
 
     &:disabled,
-    &[aria-disabled="true"] {
-        background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    &[aria-disabled='true'] {
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
             $select-bg-disabled;
         border-color: $color-marketing-gray-30;
         color: $color-marketing-gray-70;
@@ -441,8 +441,8 @@ label {
 }
 
 .mzp-is-error {
-    input[type="checkbox"],
-    input[type="radio"] {
+    input[type='checkbox'],
+    input[type='radio'] {
         box-shadow: $field-focus-ring-error;
     }
 }
